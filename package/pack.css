@@ -10,7 +10,7 @@
 /* NAVBAR */
 /* NAVBAR */
 .navbar{
-  position:absolute;
+  position:fixed;
   top:0;
   width:100%;
   padding:18px 6%;
@@ -424,3 +424,4 @@
     font-size:14px;
   }
 }
+
