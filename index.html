@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fly Maverick</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">✈ Fly Maverick</div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+  
+
+  <!-- PACKAGES DROPDOWN -->
+  
+  <li class="dropdown">
+    <a href="#">Packages <i class="fas fa-chevron-down"></i></a>
+    <ul class="submenu">
+      <li><a href="package/coupleescape.html">Couple Escape Package</a></li>
+      <li><a href="package/valentine.html">Valentine Special Package</a></li>
+      <li><a href="package/family.html">Family Vacation Package</a></li>
+      <li><a href="package/spiritual.html">Spiritual Journey Package</a></li>
+      <li><a href="package/friend.html">Friendship Travel Package</a></li>
+      <li><a href="package/solo.html">Solo Explorer Package</a></li>
+      <li><a href="package/backpacker.html">Backpacker Budget Plans</a></li>
+      <li><a href="package/hotspot.html">Hotspot Travel Deals</a></li>
+      <li><a href="package/work.html">Work + Travel Packages</a></li>
+    </ul>
+  </li>
+
+  <!-- STUDENT PROGRAMS -->
+  <li class="dropdown">
+    <a href="#">Student Programs <i class="fas fa-chevron-down"></i></a>
+    <ul class="submenu">
+      <li><a href="student/fly25.html">Fly Before 25 Program</a></li>
+      <li><a href="student/stuexp.html">Student Explore Club</a></li>
+      <li><a href="student/study.html">Study + Travel Combo Guide</a></li>
+      <li><a href="student/traval.html">Travel Influencer Program</a></li>
+      <li><a href="student/free.html">Free International Webinar</a></li>
+      <li><a href="student/group.html">Group Booking Student Bonus</a></li>
+      <li><a href="student/graduation.html">Graduation Gift Offer</a></li>
+      <li><a href="student/freetraval.html">Free Travel Resume Booster</a></li>
+      <li><a href="student/college.html">College Seminar Strategy</a></li>
+    </ul>
+  </li>
+
+  <!-- LAUNCH OFFERS -->
+  <li class="dropdown">
+    <a href="#">Launch Offers <i class="fas fa-chevron-down"></i></a>
+    <ul class="submenu">
+      <li><a href="launch/flight.html">Free Flight Ticket Offer</a></li>
+      <li><a href="launch/visa.html">Free Visa Processing</a></li>
+      <li><a href="launch/passport.html">Free Passport Assistance</a></li>
+      <li><a href="launch/traval.html">Free Travel Kit</a></li>
+      <li><a href="launch/flat.html">Flat Cashback Offer</a></li>
+      <li><a href="launch/famcombo.html">Family Combo Bonus</a></li>
+      <li><a href="launch/airport.html">Free Airport Pickup / Lounge Access</a></li>
+      <li><a href="launch/book.html">Book Now Pay Later</a></li>
+      <li><a href="launch/refer.html">Refer 1 Fly Offer</a></li>
+    </ul>
+  </li>
+
+  <!-- VISA DROPDOWN -->
+  <li class="dropdown">
+    <a href="#">Visa <i class="fas fa-chevron-down"></i></a>
+
+    <ul class="submenu">
+      <li><a href="tourist.html">Tourist Visa</a></li>
+      <li><a href="work.html">Work Visa</a></li>
+      <li><a href="studyvisa.html">Student Visa</a></li>
+      <li><a href="visitvisa.html">Visit Visa</a></li>
+    </ul>
+  </li>
+
+  <li><a href="#">Contact</a></li>
+</ul>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <!-- RIGHT SIDE -->
+  <div class="nav-right">
+
+    <!-- ICONS -->
+    <div class="nav-icons">
+      <i class="fas fa-phone"></i>
+      <i class="fas fa-envelope"></i>
+    </div>
+
+    <!-- SIGN UP BUTTON -->
+    <a href="#" class="signup-btn">Sign Up</a>
+
+    <!-- MOBILE MENU -->
+    <div class="menu-btn" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Hey Traveller! where are you <span>Flying to?</span></h1>
+  </div>
+
+  <!-- CHAT TOGGLE BUTTON -->
+<div class="chatbot-toggle" onclick="toggleChat()">
+  <i class="fas fa-comments"></i>
+</div>
+
+<!-- CHATBOX -->
+<div class="chatbox" id="chatbox">
+
+  <div class="chat-header">
+    Fly Maverick Assistant
+    <span onclick="toggleChat()">✖</span>
+  </div>
+
+  <div class="chat-body" id="chatBody">
+    <div class="bot-msg">👋 Hi! Ask me anything about Fly Maverick.</div>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Type your question...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</section>
+
+<!-- BOOKING PANEL -->
+<section class="booking">
+  <div class="form-grid">
+
+    <div class="field">
+      <label><i class="fas fa-plane-departure"></i> From</label>
+      <input type="text" placeholder="Chennai (MAA)">
+    </div>
+
+    <div class="swap">
+      <i class="fas fa-right-left"></i>
+    </div>
+
+    <div class="field">
+      <label><i class="fas fa-plane-arrival"></i> To</label>
+      <input type="text" placeholder="London (LHR)">
+    </div>
+
+    <div class="field">
+      <label><i class="fas fa-calendar"></i> Departure</label>
+      <input type="date">
+    </div>
+
+    <div class="field">
+      <label><i class="fas fa-calendar-check"></i> Return</label>
+      <input type="date">
+    </div>
+
+    <div class="field">
+      <label><i class="fas fa-user"></i> Passengers</label>
+      <select>
+        <option>1 Adult</option>
+        <option>2 Adults</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label><i class="fas fa-chair"></i> Class</label>
+      <select>
+        <option>Economy</option>
+        <option>Business</option>
+      </select>
+    </div>
+
+    <button class="search-btn">
+      <i class="fas fa-magnifying-glass"></i> Search Flights
+    </button>
+
+  </div>
+</section>
+<!-- ABOUT SECTION -->
+<section class="about-section">
+
+  <div class="about-wrapper">
+
+    <!-- IMAGE -->
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" alt="Fly Maverick Travel">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="about-content">
+      <h2>About Fly Maverick</h2>
+
+      <p>
+        Fly Maverick is a premium travel and visa consultancy helping people explore the world with confidence.
+        We provide expert visa guidance, curated travel packages, and personalized international travel planning.
+      </p>
+
+      <p>
+        Our mission is simple — make global travel smooth, transparent, and stress-free.
+        From consultation to departure, we ensure every journey is memorable.
+      </p>
+
+      <!-- CONTACT INFO -->
+      <div class="about-contact">
+        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope"></i> info@flymaverick.com</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<section class="countries-section">
+  <h2 class="section-title">Explore Top Destinations</h2>
+
+  <div class="countries-grid">
+
+    <div class="country-card">
+      <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c">
+      <h3>Japan</h3>
+    </div>
+
+    <div class="country-card">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34">
+      <h3>France</h3>
+    </div>
+
+    <div class="country-card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+      <h3>Australia</h3>
+    </div>
+
+    <div class="country-card">
+      <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828">
+      <h3>Canada</h3>
+    </div>
+
+    <div class="country-card">
+      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c">
+      <h3>USA</h3>
+    </div>
+
+    <div class="country-card">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c">
+
+      <h3>Dubai</h3>
+    </div>
+
+    <div class="country-card">
+      <img src="https://images.unsplash.com/photo-1473625247510-8ceb1760943f">
+      <h3>Singapore</h3>
+    </div>
+
+    <div class="country-card">
+      <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1">
+      <h3>Switzerland</h3>
+    </div>
+
+    <div class="country-card">
+      <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff">
+      <h3>Italy</h3>
+    </div>
+
+    <div class="country-card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+      <h3>Maldives</h3>
+    </div>
+
+    <div class="country-card">
+      <img src="https://images.unsplash.com/photo-1524499982521-1ffd58dd89ea">
+      <h3>Thailand</h3>
+    </div>
+
+    <div class="country-card">
+      <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090">
+      <h3>UK</h3>
+    </div>
+
+    <div class="country-card">
+      <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade">
+      <h3>Germany</h3>
+    </div>
+
+    <div class="country-card">
+      <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963">
+      <h3>New Zealand</h3>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="packages-section">
+  <h2 class="section-title">Popular Travel Packages</h2>
+
+  <div class="packages-grid">
+
+    <div class="package-card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+      <div class="package-content">
+        <h3>Australia Explorer</h3>
+        <p>7 Days • Sydney & Melbourne</p>
+        <span>From ₹1,25,000</span>
+      </div>
+    </div>
+
+    <div class="package-card">
+      <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c">
+      <div class="package-content">
+        <h3>Japan Cherry Blossom</h3>
+        <p>6 Days • Tokyo & Kyoto</p>
+        <span>From ₹1,45,000</span>
+      </div>
+    </div>
+
+    <div class="package-card">
+      <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1">
+      <div class="package-content">
+        <h3>Europe Highlights</h3>
+        <p>10 Days • Multi-country</p>
+        <span>From ₹1,85,000</span>
+      </div>
+    </div>
+
+    <div class="package-card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+      <div class="package-content">
+        <h3>Maldives Luxury</h3>
+        <p>4 Days • Beach Resort</p>
+        <span>From ₹95,000</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="why-section">
+
+  <div class="why-wrapper">
+
+    <!-- LEFT IMAGE -->
+    <div class="why-img">
+<img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" alt="Airplane Wing">
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="why-content">
+      <h2>Why Choose Fly Maverick</h2>
+      <p class="subtitle">Trusted international travel & visa partner</p>
+
+      <div class="features">
+
+        <div class="feature">
+          <i class="fas fa-passport"></i>
+          <div>
+            <h4>Expert Visa Guidance</h4>
+            <p>Professional consultation for all major destinations.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <i class="fas fa-plane"></i>
+          <div>
+            <h4>Premium Travel Planning</h4>
+            <p>Customized international packages tailored to you.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <i class="fas fa-clock"></i>
+          <div>
+            <h4>Fast Processing</h4>
+            <p>Quick turnaround with transparent updates.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <i class="fas fa-headset"></i>
+          <div>
+            <h4>Dedicated Support</h4>
+            <p>Friendly support from enquiry to departure.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="#" class="why-btn">Start Your Journey →</a>
+    </div>
+
+  </div>
+
+</section>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<section class="process-section">
+
+  <h2 class="section-title">Our Simple Travel Process</h2>
+  <p class="section-sub">From enquiry to take-off — we handle everything</p>
+
+  <div class="process-wrapper">
+
+    <div class="process-step">
+      <div class="icon"><i class="fas fa-comments"></i></div>
+      <h3>Consultation</h3>
+      <p>Tell us your travel goals and preferred destinations.</p>
+    </div>
+
+    <div class="process-step">
+      <div class="icon"><i class="fas fa-file-alt"></i></div>
+      <h3>Documentation</h3>
+      <p>We guide you through all required visa documents.</p>
+    </div>
+
+    <div class="process-step">
+      <div class="icon"><i class="fas fa-passport"></i></div>
+      <h3>Visa Processing</h3>
+      <p>Our experts handle submissions and tracking.</p>
+    </div>
+
+    <div class="process-step">
+      <div class="icon"><i class="fas fa-plane"></i></div>
+      <h3>Fly With Confidence</h3>
+      <p>Receive your visa and start your global journey.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<section class="visa-section">
+
+  <h2 class="section-title">Visa Services by Fly Maverick</h2>
+  <p class="section-sub">Expert visa assistance for top global destinations</p>
+
+  <div class="visa-wrapper">
+
+    <!-- LEFT IMAGE -->
+    <div class="visa-img">
+<img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff" alt="Passport">
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="visa-content">
+
+      <p class="visa-desc">
+        Fly Maverick provides reliable and transparent visa assistance for individuals,
+        families, and professionals planning international travel. From documentation to
+        approval, we ensure a smooth and stress-free visa process.
+      </p>
+
+      <div class="visa-types">
+
+        <div class="visa-card">
+          <i class="fas fa-umbrella-beach"></i>
+          <h4>Tourist Visa</h4>
+          <p>Explore the world with hassle-free holiday visa support.</p>
+        </div>
+
+        <div class="visa-card">
+          <i class="fas fa-user-friends"></i>
+          <h4>Visit Visa</h4>
+          <p>Visit family and friends abroad with proper documentation.</p>
+        </div>
+
+        <div class="visa-card">
+          <i class="fas fa-briefcase"></i>
+          <h4>Work Visa</h4>
+          <p>End-to-end assistance for overseas employment visas.</p>
+        </div>
+
+        <div class="visa-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h4>Student Visa</h4>
+          <p>Guidance for students pursuing global education.</p>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <a href="#" class="visa-btn">Apply for Visa →</a>
+
+    </div>
+  </div>
+
+</section>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<section class="contact-section">
+
+  <div class="contact-overlay"></div>
+
+  <div class="contact-wrapper">
+
+    <!-- LEFT SIDE -->
+    <div class="contact-info">
+      <h2>Have Questions About Fly Maverick?</h2>
+      <p class="sub">
+        Our travel experts are ready to help you with visas, international trips, and travel planning.
+      </p>
+
+      <div class="contact-details">
+        <p><i class="fas fa-phone"></i> +91 9626877940</p>
+        <p><i class="fas fa-envelope"></i> flymaverick@gmail.com</p>
+      </div>
+
+      <!-- IMAGE -->
+     
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="contact-form-box">
+      <h3>Send Your Enquiry</h3>
+
+      <form id="whatsappForm">
+
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <input type="email" id="email" placeholder="Gmail Address" required>
+
+        <input type="text" id="country" placeholder="Interested Country">
+
+        <select id="visa">
+          <option value="">Select Visa Type</option>
+          <option>Tourist Visa</option>
+          <option>Visit Visa</option>
+          <option>Work Visa</option>
+          <option>Student Visa</option>
+        </select>
+
+        <textarea id="message" rows="3" placeholder="Your Message"></textarea>
+
+        <button type="submit">Send on WhatsApp</button>
+
+      </form>
+    </div>
+
+  </div>
+
+</section>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<section class="testimonial-section">
+
+  <h2 class="section-title">What Our Travellers Say</h2>
+  <p class="section-sub">Real experiences from Fly Maverick customers</p>
+
+  <div class="testimonial-grid">
+
+    <!-- TESTIMONIAL 1 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="review">
+        Fly Maverick made my Australia visa process completely stress-free.
+        Their guidance and transparency were outstanding. Highly recommended!
+      </p>
+
+      <div class="user">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg">
+        <div>
+          <h4>Arun Kumar</h4>
+          <span>Australia Traveller</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TESTIMONIAL 2 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="review">
+        Very professional service. I got my Canada visitor visa approved
+        without any confusion. The team is extremely supportive.
+      </p>
+
+      <div class="user">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg">
+        <div>
+          <h4>Priya S</h4>
+          <span>Canada Visit Visa</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TESTIMONIAL 3 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="review">
+        Best travel consultancy in Tamil Nadu. They handled everything
+        from documentation to ticketing. Smooth and trustworthy service.
+      </p>
+
+      <div class="user">
+        <img src="https://randomuser.me/api/portraits/men/65.jpg">
+        <div>
+          <h4>Rahul M</h4>
+          <span>Europe Tour</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<section class="faq-section">
+
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <p class="section-sub">Everything you need to know about Fly Maverick</p>
+
+  <div class="faq-wrapper">
+
+    <!-- FAQ ITEM -->
+    <div class="faq-item">
+      <button class="faq-question">
+        What services does Fly Maverick provide?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        We offer visa assistance, international travel packages, documentation support,
+        and end-to-end travel planning for destinations worldwide.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Which countries do you provide visas for?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        We assist with visas for Australia, Canada, UK, Europe, Japan,
+        New Zealand, and many other global destinations.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        How long does visa processing take?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        Processing time depends on the country and visa type.
+        Most tourist visas take between 7–30 working days.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Do you provide document guidance?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        Yes. Our experts guide you through every document required,
+        ensuring accurate submission and higher approval chances.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Can Fly Maverick handle complete travel planning?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        Absolutely! We offer complete travel solutions including
+        visa processing, itinerary planning, and travel assistance.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        How can I contact Fly Maverick?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        You can contact us via WhatsApp, phone, or email.
+        Our team is always ready to assist you with your travel needs.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<footer class="footer">
+
+  <div class="footer-wrapper">
+
+    <!-- BRAND -->
+    <div class="footer-col">
+      <h2>Fly Maverick</h2>
+      <p>Your trusted partner for international travel.</p>
+
+      <div class="socials">
+        <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Fees</a></li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-col">
+      <h3>Services</h3>
+      <ul>
+        <li>Visit Visa Assistance</li>
+        <li>Documentation Support</li>
+        <li>Application Guidance</li>
+      </ul>
+    </div>
+
+    <!-- COUNTRIES -->
+    <div class="footer-col">
+      <h3>Countries</h3>
+      <ul>
+        <li>Australia • Canada</li>
+        <li>New Zealand • UK</li>
+        <li>Europe • Asia</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 Fly Maverick. All rights reserved.</p>
+    <span>Your journey starts with us.</span>
+  </div>
+
+</footer>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script src="script.js"></script>
+</body>
+</html>
